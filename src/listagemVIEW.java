@@ -4,11 +4,13 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
-
-
+/**
+ * 
+ *@author alenc
+ */
 public class listagemVIEW extends javax.swing.JFrame {
 
-   
+ 
     public listagemVIEW() {
         initComponents();
          try {
@@ -16,8 +18,10 @@ public class listagemVIEW extends javax.swing.JFrame {
         } catch (NullPointerException e) {
             System.out.println("DEU ERRO");
         }
+       
+    }
 
-
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -146,6 +150,7 @@ public class listagemVIEW extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Erro de conexão");
         }
+
     }//GEN-LAST:event_btnVenderActionPerformed
 
     private void btnVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVendasActionPerformed
@@ -205,7 +210,7 @@ public class listagemVIEW extends javax.swing.JFrame {
     private javax.swing.JTable listaProdutos;
     // End of variables declaration//GEN-END:variables
 
-    private void listarProdutos(){
+    public void listarProdutos(String Filtro){
         ProdutosDAO produtosdao = new ProdutosDAO();
         conectaDAO dao = new conectaDAO();
 
@@ -237,7 +242,5 @@ public class listagemVIEW extends javax.swing.JFrame {
             
         }
     
-    }
-    
-    }
+    }}
 }
